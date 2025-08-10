@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>MultiMax Calculator</title>
+</head>
+<body>
+    <div class="premium-container">
+        <div class="calculator-glass">
+            <div class="calc-header">
+                <span class="calc-title"><i class="fas fa-calculator"></i> MultiMax Calculator</span>
+                <button class="theme-toggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+            </div>
+            <input type="text" id="screen" class="calc-screen" placeholder="0" readonly>
+            <div class="calc-memory">
+                <button class="mem-btn" title="Memory Save">MS</button>
+                <button class="mem-btn" title="Memory Recall">MR</button>
+                <button class="mem-btn" title="Memory Clear">MC</button>
+            </div>
+            <div class="calc-buttons">
+                <button>(</button>
+                <button>)</button>
+                <button>%</button>
+                <button>C</button>
+                <button>AC</button>
+                <button>7</button>
+                <button>8</button>
+                <button>9</button>
+                <button>/</button>
+                <button>4</button>
+                <button>5</button>
+                <button>6</button>
+                <button>*</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>-</button>
+                <button>0</button>
+                <button>.</button>
+                <button>=</button>
+                <button>+</button>
+                <button class="del-btn" title="Delete"><i class="fas fa-delete-left"></i></button>
+            </div>
+            <div class="calc-history">
+                <span class="history-title"><i class="fas fa-history"></i> History</span>
+                <ul id="history-list"></ul>
+                <button id="clear-history" class="mem-btn" style="margin-top:8px;">Clear History</button>
+            </div>
+        </div>
+    </div>
+    <script src="js.js"></script>
+</body>
+</html>

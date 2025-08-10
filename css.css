@@ -1,0 +1,175 @@
+body {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  font-family: 'Montserrat', sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body.dark-theme {
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
+  color: #fff;
+}
+body.light-theme {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e6ea 100%);
+  color: #232526;
+}
+.premium-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.calculator-glass {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 32px 24px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+body.light-theme .calculator-glass {
+  background: rgba(255,255,255,0.85);
+  box-shadow: 0 8px 32px 0 rgba(200, 200, 200, 0.37);
+  border: 1px solid rgba(200, 200, 200, 0.18);
+}
+.calc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.calc-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+body.light-theme .calc-title {
+  color: #232526;
+}
+.theme-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.theme-toggle:hover {
+  color: #ffd700;
+}
+.calc-screen {
+  width: 100%;
+  height: 48px;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  border: none;
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  padding: 0 16px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+body.light-theme .calc-screen {
+  background: rgba(255,255,255,0.95);
+  color: #232526;
+}
+.calc-memory {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.mem-btn {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+  color: #232526;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+body.light-theme .mem-btn {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+  color: #232526;
+}
+.mem-btn:hover {
+  background: linear-gradient(135deg, #ffb347 0%, #ffd700 100%);
+}
+.calc-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.calc-buttons button {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  padding: 16px 0;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+.calc-buttons button:hover {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+  color: #232526;
+  transform: scale(1.08);
+}
+body.light-theme .calc-buttons button {
+  background: rgba(230,230,230,0.7);
+  color: #232526;
+}
+body.light-theme .calc-buttons button:hover {
+  background: linear-gradient(135deg, #ffd700 0%, #ffb347 100%);
+  color: #232526;
+}
+.calc-buttons button.btn-animate {
+  transform: scale(1.12);
+  box-shadow: 0 0 12px #ffd70099;
+}
+.calc-history {
+  background: rgba(255,255,255,0.10);
+  border-radius: 12px;
+  padding: 12px;
+  color: #fff;
+  max-height: 120px;
+  overflow-y: auto;
+}
+body.light-theme .calc-history {
+  background: rgba(230,230,230,0.7);
+  color: #232526;
+}
+.history-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+#history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#history-list li {
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+  color: #ffd700;
+}
+body.light-theme #history-list li {
+  color: #345b63;
+}
+.premium-container, .calculator-glass, .calc-title, .calc-screen, .calc-memory, .mem-btn, .calc-buttons button, .calc-history, .history-title, #history-list li {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
